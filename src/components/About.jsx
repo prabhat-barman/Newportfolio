@@ -21,7 +21,7 @@ function About() {
         <div className="w-64 p-4 h-64 overflow-hidden ml-20 mt-8 rounded-full">
           <img
             className="w-full h-full object-cover rounded-full"
-            src="jac.jpg"
+            src="./images/jac.png"
             alt="photo"
           />
         </div>

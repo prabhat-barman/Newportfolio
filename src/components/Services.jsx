@@ -91,7 +91,7 @@ const Services = () => {
             <div className="img w-60 h-24 pb-2">
               <img
                 className="w-full h-full object-cover"
-                src="photo5.png"
+                src="./images/photo5.png"
                 alt=""
               />
             </div>

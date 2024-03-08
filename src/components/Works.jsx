@@ -28,7 +28,7 @@ const Works = () => {
               }}/>
               </div>
               <div className="img w-48 h-36 bg-black">
-                <img className="w-full h-full object-cover" src="photo1.png" alt="" />
+                <img className="w-full h-full object-cover" src="./images/photo1.png" alt="" />
 
               </div>
             </div>
@@ -48,7 +48,7 @@ const Works = () => {
               }}/>
               </div>
               <div className="img w-48 h-36 bg-black">
-                <img className="w-full h-full object-cover" src="photo2.png" alt="" />
+                <img className="w-full h-full object-cover" src="./images/photo2.png" alt="" />
 
               </div>
             </div>
@@ -70,7 +70,7 @@ const Works = () => {
               }}/>
               </div>
               <div className="img w-48 h-36 bg-black">
-                <img className="w-full h-full object-cover" src="photo4.png" alt="" />
+                <img className="w-full h-full object-cover" src="./images/photo4.png" alt="" />
 
               </div>
             </div>
@@ -90,7 +90,7 @@ const Works = () => {
               }}/>
               </div>
               <div className="img w-48 h-36 bg-black">
-                <img className="w-full h-full object-cover" src="photo3.png" alt="" />
+                <img className="w-full h-full object-cover" src="./images/photo3.png" alt="" />
 
               </div>
             </div>

@@ -88,7 +88,7 @@ function Home() {
       </div>
       <div className="img w-[50vh] h-[80vh] top-12 right-44 absolute truncate object-cover">
         {" "}
-        <img src="./jacobphoto.png" alt="" />{" "}
+        <img src="./images/jacobphoto.png" alt="" />{" "}
       </div>
       </div>
     </div>
