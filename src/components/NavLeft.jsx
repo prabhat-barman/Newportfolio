@@ -10,9 +10,24 @@ import Works from "./Works";
 import Contact from "./Contact";
 import Blogs from "./Blogs";
 
-
 const NavLeft = () => {
   const [first, setfirst] = useState("home");
+  // const renderPage = () => {
+  //   switch (first) {
+  //     case "home":
+  //       return <Home />;
+  //     case "about":
+  //       return <About />;
+  //     case "services":
+  //       return <Services />;
+  //     case "works":
+  //       return <Works />;
+  //     case "Contact":
+  //       return <Contact />;
+  //       default:
+  //         return null;
+  //   }
+  // };
   return (
     <>
       <div className='nav bg-black h-screen w-44 h-full font-["Montserrat"] text-white flex flex-col gap-16 items-start'>
@@ -55,6 +70,7 @@ const NavLeft = () => {
           >
             contacts
           </button>
+           {/* <div>{renderPage()}</div> */}
         </div>
 
         <div className="sociallinks w-4 h-4 p-4 rounded-full">
@@ -89,8 +105,6 @@ const NavLeft = () => {
           copying &copy;2024 jacob <br />
           jones.all right reserved.
         </h6>
-
-        {/* {first == <Home/> ?  : first == "about" ? <About/> : ""} */}
       </div>
       {first === "home" ? (
         <Home />
