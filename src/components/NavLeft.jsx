@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import { FaSquareInstagram } from "react-icons/fa6";
 import { IoLogoBehance } from "react-icons/io5";
 import { FaDribbble } from "react-icons/fa";
@@ -9,70 +7,80 @@ import Services from "./Services";
 import Works from "./Works";
 import Contact from "./Contact";
 import Blogs from "./Blogs";
+import { useState } from "react";
 
-const NavLeft = () => {
-  const [first, setfirst] = useState("home");
-  // const renderPage = () => {
-  //   switch (first) {
-  //     case "home":
-  //       return <Home />;
-  //     case "about":
-  //       return <About />;
-  //     case "services":
-  //       return <Services />;
-  //     case "works":
-  //       return <Works />;
-  //     case "Contact":
-  //       return <Contact />;
-  //       default:
-  //         return null;
-  //   }
-  // };
+const NavLeft = (formData) => {
+  const [first, setFirst] = useState("home");
+  console.log(formData);
+
+  let componentToRender;
+
+  switch (first) {
+    case "home":
+      componentToRender = <Home formData={formData} />;
+      break;
+    case "about":
+      componentToRender = <About formData={formData} />;
+      break;
+    case "services":
+      componentToRender = <Services formData={formData} />;
+      break;
+    case "works":
+      componentToRender = <Works formData={formData} />;
+      break;
+    case "blogs":
+      componentToRender = <Blogs formData={formData} />;
+      break;
+    case "contact":
+      componentToRender = <Contact formData={formData} />;
+      break;
+    default:
+      componentToRender = null;
+  }
+
   return (
     <>
       <div className='nav bg-black h-screen w-44 h-full font-["Montserrat"] text-white flex flex-col gap-16 items-start'>
         <h1 className="font-bold text-xl ml-7 mt-7">Jac.</h1>
-
         <div className="links flex flex-col gap-3">
           <button
-            onClick={() => setfirst("home")}
+            onClick={() => setFirst("home")}
             className=" ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             home
           </button>
           <button
-            onClick={() => setfirst("about")}
+            onClick={() => setFirst("about")}
             className="ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             about
           </button>
           <button
-            onClick={() => setfirst("services")}
+            onClick={() => setFirst("services")}
             className="ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             services
           </button>
           <button
-            onClick={() => setfirst("works")}
+            onClick={() => setFirst("works")}
             className="ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             works
           </button>
           <button
-            onClick={() => setfirst("blogs")}
+            onClick={() => setFirst("blogs")}
             className="ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             blogs
           </button>
           <button
-            onClick={() => setfirst("contact")}
+            onClick={() => setFirst("contact")}
             className="ml-6 font-bold uppercase text-sm text-slate-300 hover:text-white"
           >
             contacts
           </button>
-           {/* <div>{renderPage()}</div> */}
+          {/* <div>{renderPage()}</div> */}
         </div>
-
         <div className="sociallinks w-4 h-4 p-4 rounded-full">
           <IoLogoBehance
             style={{ fontSize: "34px", marginLeft: "2px", marginBottom: "7px" }}
@@ -106,21 +114,7 @@ const NavLeft = () => {
           jones.all right reserved.
         </h6>
       </div>
-      {first === "home" ? (
-        <Home />
-      ) : first == "about" ? (
-        <About />
-      ) : first == "works" ? (
-        <Works />
-      ) : first == "contact" ? (
-        <Contact />
-      ) : first == "blogs" ? (
-        <Blogs />
-      ) : first == "services" ? (
-        <Services />
-      ) : (
-        ""
-      )}
+      {componentToRender}
     </>
   );
 };
