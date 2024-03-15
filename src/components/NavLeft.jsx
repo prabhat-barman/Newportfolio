@@ -41,7 +41,7 @@ const NavLeft = (formData) => {
   return (
     <>
       <div className='nav bg-black h-screen w-44 h-full font-["Montserrat"] text-white flex flex-col gap-16 items-start'>
-        <h1 className="font-bold text-xl ml-7 mt-7">Jac.</h1>
+        <h1 className="font-bold text-xl ml-7 mt-7">{formData?.firstName}.</h1>
         <div className="links flex flex-col gap-3">
           <button
             onClick={() => setFirst("home")}
